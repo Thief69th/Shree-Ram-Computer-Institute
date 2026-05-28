@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Ram Computer Institute - Varanasi | Best Computer Training Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e40af;
+            --secondary: #059669;
+            --accent: #f59e0b;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --text: #1e293b;
+            --border: #e2e8f0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            background: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .nav-button {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-button:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: 2px solid white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* ===== STATS SECTION ===== */
+        .stats {
+            background: white;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: -3rem auto 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: var(--shadow);
+            border-radius: 12px;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        /* ===== COURSES SECTION ===== */
+        .courses {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 5px solid var(--primary);
+            animation: slideUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .course-card:nth-child(1) { animation-delay: 0.1s; }
+        .course-card:nth-child(2) { animation-delay: 0.2s; }
+        .course-card:nth-child(3) { animation-delay: 0.3s; }
+        .course-card:nth-child(4) { animation-delay: 0.4s; }
+        .course-card:nth-child(5) { animation-delay: 0.5s; }
+        .course-card:nth-child(6) { animation-delay: 0.6s; }
+        .course-card:nth-child(7) { animation-delay: 0.7s; }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .course-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+        }
+
+        .course-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-body {
+            padding: 2rem;
+        }
+
+        .course-duration {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .course-fee {
+            font-size: 1.75rem;
+            color: var(--secondary);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .course-level {
+            display: inline-block;
+            background: #f0f9ff;
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .course-description {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-enroll {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-enroll:hover {
+            background: var(--secondary);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background: white;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .about-text p {
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .features-list li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 12px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .about-image-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* ===== REVIEWS SECTION ===== */
+        .reviews {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent);
+            transition: all 0.3s;
+        }
+
+        .review-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .review-stars {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .review-author {
+            font-weight: 700;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .review-date {
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        /* ===== INQUIRY FORM SECTION ===== */
+        .inquiry {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            color: white;
+        }
+
+        .inquiry-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .inquiry h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .inquiry-subtitle {
+            text-align: center;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #f97316;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-choose {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .why-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .why-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .why-description {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #cbd5e1;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-divider {
+            border-top: 1px solid #475569;
+            padding-top: 2rem;
+            text-align: center;
+            color: #94a3b8;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* ===== MODAL/THANK YOU ===== */
+        .success-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            z-index: 2000;
+            box-shadow: var(--shadow-lg);
+            animation: popIn 0.4s ease-out;
+        }
+
+        @keyframes popIn {
+            from {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav>
+        <div class="navbar-container">
+            <a href="#home" class="logo">🎓 Shree <span>Ram</span></a>
+            <ul class="nav-menu">
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#why-choose">Why Us</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-button" onclick="scrollToSection('inquiry')">Free Demo Class</button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+        <h1>Learn Computers. Build Your Future.</h1>
+        <p>Varanasi ka sabse trusted computer training center — CCC, C++, PHP, Web Development aur bahut kuch!</p>
+        <div class="hero-buttons">
+            <button class="btn-primary" onclick="scrollToSection('courses')">Explore Courses</button>
+            <button class="btn-secondary" onclick="scrollToSection('inquiry')">Enroll Now</button>
+        </div>
+    </section>
+
+    <!-- ===== STATS SECTION ===== -->
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-number">5.0⭐</div>
+            <div class="stat-label">Perfect Rating</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">95+</div>
+            <div class="stat-label">Happy Students</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">7</div>
+            <div class="stat-label">Courses Available</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">7 Days</div>
+            <div class="stat-label">Weekly Open</div>
+        </div>
+    </div>
+
+    <!-- ===== COURSES SECTION ===== -->
+    <section id="courses" class="courses">
+        <h2 class="section-title">Our Courses</h2>
+        <p class="section-subtitle">Professional Training for Every Level</p>
+        
+        <div class="course-grid">
+            <!-- CCC Course -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">📋</div>
+                    <div class="course-name">CCC Course</div>
+                </div>
+                <div class="course-body">
+                    <span class="course-level">Basic</span>
+                    <div class="course-fee">₹1,500 - 3,000</div>
+                    <div class="course-duration">⏱️ 2-3 Months</div>
+                    <p class="course-description">Government-recognized certification. NIELIT approved. Perfect for government jobs.</p>
+                    <button class="btn-enroll" onclick="selectCourse('CCC Course')">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Computer Applications -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">🖥️</div>
+                    <div class="course-name">Computer Applications</div>
+                </div>
+                <div class="course-body">
+                    <span class="course-level">Basic</span>
+                    <div class="course-fee">₹1,000 - 2,500</div>
+                    <div class="course-duration">⏱️ 1-3 Months</div>
+                    <p class="course-description">MS Office, Internet, Email, Typing. Perfect for beginners.</p>
+                    <button class="btn-enroll" onclick="selectCourse('Computer Applications')">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- C++ Programming -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">⌨️</div>
+                    <div class="course-name">C++ Programming</div>
+                </div>
+                <div class="course-body">
+                    <span class="course-level">Basic</span>
+                    <div class="course-fee">₹2,000 - 4,000</div>
+                    <div class="course-duration">⏱️ 2-3 Months</div>
+                    <p class="course-description">Programming fundamentals - variables, loops, functions, OOP.</p>
+                    <button class="btn-enroll" onclick="selectCourse('C++ Programming')">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- CAD Design -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">📐</div>
+                    <div class="course-name">CAD Design</div>
+                </div>
+                <div class="course-body">
+                    <span class="course-level">Advanced</span>
+                    <div class="course-fee">₹3,000 - 8,000</div>
+                    <div class="course-duration">⏱️ 2-4 Months</div>
+                    <p class="course-description">Professional 2D & 3D design training. Industry-ready skills.</p>
+                    <button class="btn-enroll" onclick="selectCourse('CAD Design')">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- PHP Website Development -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">🌐</div>
+                    <div class="course-name">PHP Web Development</div>
+                </div>
+                <div class="course-body">
+                    <span class="course-level">Advanced</span>
+                    <div class="course-fee">₹5,000 - 10,000</div>
+                    <div class="course-duration">⏱️ 3-5 Months</div>
+                    <p class="course-description">HTML, CSS, PHP, MySQL. Build real-world websites and applications.</p>
+                    <button class="btn-enroll" onclick="selectCourse('PHP Web Development')">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Web App Development -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">💻</div>
+                    <div class="course-name">Web App Development</div>
+                </div>
+                <div class="course-body">
+                    <span class="course-level">Advanced</span>
+                    <div class="course-fee">₹8,000 - 15,000</div>
+                    <div class="course-duration">⏱️ 4-6 Months</div>
+                    <p class="course-description">Full-stack web development. Frontend & Backend integration.</p>
+                    <button class="btn-enroll" onclick="selectCourse('Web App Development')">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Custom Website Solutions -->
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">🛠️</div>
+                    <div class="course-name">Custom Solutions</div>
+                </div>
+                <div class="course-body">
+                    <span class="course-level">Advanced</span>
+                    <div class="course-fee">On Request</div>
+                    <div class="course-duration">⏱️ Flexible</div>
+                    <p class="course-description">Tailored training programs based on your specific needs and goals.</p>
+                    <button class="btn-enroll" onclick="selectCourse('Custom Website Solutions')">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about">
+        <div class="about-container">
+            <h2 class="section-title">About Shree Ram</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Varanasi ka Bharosemand Computer Institute</h2>
+                    <p>Established in 2024, Shree Ram Computer Institute has already earned the trust of 95+ students. Our teaching approach is simple, practical, and result-oriented.</p>
+                    <p>We don't just teach theory — we focus on practical skills that get you hired or help you start freelancing. Every student gets hands-on experience with dedicated computer labs.</p>
+                    <ul class="features-list">
+                        <li>100% Practical Training</li>
+                        <li>Concept-First Teaching</li>
+                        <li>Zero Hidden Fees</li>
+                        <li>7 Days, 11 Hours Open</li>
+                        <li>Expert Patient Teachers</li>
+                        <li>Career-Focused Approach</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-text">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">🎓</div>
+                        <div>Learn. Practice. Succeed.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section id="why-choose" class="why-choose">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">⭐</div>
+                <div class="why-title">5-Star Rating</div>
+                <div class="why-description">95+ verified students gave us 5 stars. Our teaching quality is proven by our students' success.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">💰</div>
+                <div class="why-title">Transparent Fees</div>
+                <div class="why-description">No hidden charges. What we quote is what you pay. Complete transparency in pricing.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🖥️</div>
+                <div class="why-title">Practical Lab</div>
+                <div class="why-description">Every student gets a dedicated computer. Real hands-on practice, not just theory.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🕘</div>
+                <div class="why-title">7-Day Availability</div>
+                <div class="why-description">Open Sunday to Saturday, 9 AM to 8 PM. Classes fit your schedule.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">👨‍🏫</div>
+                <div class="why-title">Expert Teachers</div>
+                <div class="why-description">Patient, friendly teachers who ensure complete clarity. No question is small.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">📈</div>
+                <div class="why-title">Career-Focused</div>
+                <div class="why-description">Prepare for government exams, freelancing, or jobs. Real-world ready.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS SECTION ===== -->
+    <section id="reviews" class="reviews">
+        <h2 class="section-title">Student Reviews</h2>
+        <p class="section-subtitle">What Our Students Say</p>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Yahan ki padhai bahut hi clear aur easy hai. Teacher kabhi bhi repeat karne se nahi rokti — jab tak samajh nahi aata, baithte raho. CCC mein pehli hi baar pass ho gaya!"</p>
+                <div class="review-author">Rahul Singh</div>
+                <div class="review-date">CCC Course Student • March 2026</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Mujhe bilkul bhi computer nahi aata tha. Teen mahine baad ab main MS Excel mein kaam kar sakti hoon. Fees bhi bilkul waisi hi thi jo batai gayi thi — ek rupya bhi extra nahi liya."</p>
+                <div class="review-author">Priya Tiwari</div>
+                <div class="review-date">Computer Applications • February 2026</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"PHP course ne meri career change kar di. Sir ne sirf theory nahi — real projects pe kaam karwaaya. Ab main freelancing kar raha hoon. Best investment tha!"</p>
+                <div class="review-author">Arjun Gupta</div>
+                <div class="review-date">PHP Web Development • January 2026</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Sunday ko bhi class hoti hai isliye mujhe koi timing problem nahi aayi. C++ acche se seekh liya. Highly recommended for everyone in Varanasi!"</p>
+                <div class="review-author">Sunita Yadav</div>
+                <div class="review-date">C++ Programming • December 2025</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"CAD course mein har student ko alag system diya gaya — isliye practice bahut hui. Teachers ka behavior bhi bahut accha hai. Genuinely feel karta hai ki woh sikhana chahte hain."</p>
+                <div class="review-author">Vivek Pandey</div>
+                <div class="review-date">CAD Design • November 2025</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Sarkari naukri ki tayari ke liye CCC kiya. Yahaan ka environment bahut focused hai. Zero distractions, full learning. Varanasi mein is se better koi nahi mila mujhe."</p>
+                <div class="review-author">Neha Verma</div>
+                <div class="review-date">Computer Applications • October 2025</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INQUIRY FORM SECTION ===== -->
+    <section id="inquiry" class="inquiry">
+        <div class="inquiry-container">
+            <h2>Free Demo Class</h2>
+            <p class="inquiry-subtitle">Register today and get a free demo class!</p>
+            
+            <form id="inquiryForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Jaise: Rahul Kumar" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number *</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="10-digit number" pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course Interest *</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Select a Course --</option>
+                        <option value="CCC Course">CCC Course</option>
+                        <option value="Computer Applications">Computer Applications</option>
+                        <option value="C++ Programming">C++ Programming</option>
+                        <option value="CAD Design">CAD Design</option>
+                        <option value="PHP Web Development">PHP Web Development</option>
+                        <option value="Web App Development">Web App Development</option>
+                        <option value="Custom Solutions">Custom Solutions</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="qualification">Qualification</label>
+                    <select id="qualification" name="qualification">
+                        <option value="">-- Select --</option>
+                        <option value="Below 10th">Below 10th</option>
+                        <option value="10th Pass">10th Pass</option>
+                        <option value="12th Pass">12th Pass</option>
+                        <option value="Bachelor's">Bachelor's Degree</option>
+                        <option value="Master's">Master's Degree</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Any Questions? (Optional)</label>
+                    <textarea id="message" name="message" placeholder="Jaise: 'CCC ki fees kitni hai?' ya 'Demo class kab hogi?'"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">📩 Request Free Demo Class</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+        <div style="background: white; padding: 4rem 2rem; text-align: center;">
+            <div class="about-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">No appointment needed. Walk-in welcome!</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                    <div>
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📍</div>
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Address</h3>
+                        <p style="color: #64748b;">Near 360A Family Salon<br>Gilat Bazar Road<br>Varanasi – 221003, UP</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📞</div>
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Phone</h3>
+                        <p style="color: #64748b;"><a href="tel:08460301360" style="color: #64748b; text-decoration: none;">08460301360</a><br><a href="tel:08112399009" style="color: #64748b; text-decoration: none;">08112399009</a></p>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🕘</div>
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Working Hours</h3>
+                        <p style="color: #64748b;">Monday – Sunday<br>9:00 AM – 8:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Shree Ram Institute</h3>
+                    <p>Varanasi ka trusted computer training center. 5-star rated, affordable, and open 7 days.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#courses">Courses</a><br>
+                    <a href="#why-choose">Why Choose Us</a><br>
+                    <a href="#reviews">Reviews</a><br>
+                    <a href="#inquiry">Free Demo</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Courses</h3>
+                    <a href="#courses">CCC Course</a><br>
+                    <a href="#courses">C++ Programming</a><br>
+                    <a href="#courses">Web Development</a><br>
+                    <a href="#courses">All Courses</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 08460301360</p>
+                    <p>📞 08112399009</p>
+                    <p>📧 info@shreeramcomputer.com</p>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <p>© 2026 Shree Ram Computer Institute, Varanasi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SUCCESS MESSAGE ===== -->
+    <div class="overlay" id="overlay"></div>
+    <div class="success-message" id="successMessage">
+        <h3>✓ Thank You!</h3>
+        <p>We've received your request. Our team will call you shortly to confirm your demo class.</p>
+        <p style="color: #64748b; font-size: 0.9rem; margin-top: 1rem;">Call us anytime: <strong>08460301360</strong></p>
+        <button class="btn-primary" style="margin-top: 1.5rem; width: auto;" onclick="closeSuccessMessage()">Close</button>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function selectCourse(courseName) {
+            document.getElementById('course').value = courseName;
+            scrollToSection('inquiry');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const course = document.getElementById('course').value;
+            
+            // Validate
+            if (!name || !mobile || !course) {
+                alert('Please fill all required fields!');
+                return;
+            }
+            
+            // Show success message
+            showSuccessMessage();
+            
+            // Reset form
+            document.getElementById('inquiryForm').reset();
+            
+            // Log data (in real scenario, this would be sent to a server)
+            console.log({
+                name: name,
+                mobile: mobile,
+                course: course,
+                qualification: document.getElementById('qualification').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toLocaleString()
+            });
+        }
+
+        function showSuccessMessage() {
+            document.getElementById('overlay').classList.add('show');
+            document.getElementById('successMessage').classList.add('show');
+        }
+
+        function closeSuccessMessage() {
+            document.getElementById('overlay').classList.remove('show');
+            document.getElementById('successMessage').classList.remove('show');
+            scrollToSection('home');
+        }
+
+        // Close modal when clicking overlay
+        document.getElementById('overlay').addEventListener('click', closeSuccessMessage);
+    </script>
+</body>
+</html>
